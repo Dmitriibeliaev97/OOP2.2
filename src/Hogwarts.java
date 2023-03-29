@@ -35,6 +35,6 @@ public class Hogwarts {
 
     @Override
     public String toString() {
-        return "Лучший студент факультета: " + student;
+        return  student;
     }
 }
