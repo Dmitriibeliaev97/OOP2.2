@@ -25,22 +25,22 @@ public class Main {
 
         System.out.println("Факультет Гриффиндор:");
         studentOfGryffindor();
-        comparisonOfGryffindor(gryffindors [0], gryffindors [1]);
+        Gryffindor.comparisonOfGryffindor(gryffindors [0], gryffindors [1]);
         System.out.println();
 
         System.out.println("Факультет Пуффендуй:");
         studentOfHufflepuff();
-        comparisonOfHufflepuff(hufflepuffs[0], hufflepuffs[1]);
+        Hufflepuff.comparisonOfHufflepuff(hufflepuffs[0], hufflepuffs[1]);
         System.out.println();
 
         System.out.println("Факультет Когтевран:");
         studentOfRavenclaw();
-        comparisonOfRavenclaw(ravenclaws[0], ravenclaws[1]);
+        Ravenclaw.comparisonOfRavenclaw(ravenclaws[0], ravenclaws[1]);
         System.out.println();
 
         System.out.println("Факультет Слизерин:");
         studentOfSlytherin();
-        comparisonOfSlytherin(slytherins[0], slytherins[1]);
+        Slytherin.comparisonOfSlytherin(slytherins[0], slytherins[1]);
         System.out.println();
 
         comparisonOfStudents(gryffindors[1], slytherins [1]);
@@ -48,51 +48,6 @@ public class Main {
 
         }
 
-    public static int sumOfPointsGryffindor (Gryffindor student) {
-           int sumOfPoints = student.getNobility() + student.getHonor() + student.getBravery();
-        return sumOfPoints;
-    }
-    public static int sumOfPointsHufflepuff (Hufflepuff student) {
-        int sumOfPoints = student.getHardworking() + student.getLoyalty() + student.getHonesty();
-        return sumOfPoints;
-    }
-    public static int sumOfPointsRavenclaw (Ravenclaw student) {
-        int sumOfPoints = student.getMind() + student.getWisdom() + student.getWit() + student.getFullOfCreativity();
-        return sumOfPoints;
-    }
-    public static int sumOfPointsSlytherin (Slytherin student) {
-        int sumOfPoints = student.getCunning() + student.getDetermination() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower();
-        return sumOfPoints;
-    }
-
-    public static void comparisonOfGryffindor(Gryffindor studentA, Gryffindor studentB) {
-        if (sumOfPointsGryffindor(studentA) > sumOfPointsGryffindor(studentB)) {
-            System.out.println(studentA + " лучший Гриффиндорец, чем " + studentB);
-        } else {
-            System.out.println(studentB + " лучший Гриффиндорец, чем " + studentA);
-        }
-    }
-    public static void comparisonOfHufflepuff(Hufflepuff studentA, Hufflepuff studentB) {
-        if (sumOfPointsHufflepuff(studentA) > sumOfPointsHufflepuff(studentB)) {
-            System.out.println(studentA + " лучший Гриффиндорец, чем " + studentB);
-        } else {
-            System.out.println(studentB + " лучший Гриффиндорец, чем " + studentA);
-        }
-    }
-    public static void comparisonOfRavenclaw(Ravenclaw studentA, Ravenclaw studentB) {
-        if (sumOfPointsRavenclaw(studentA) > sumOfPointsRavenclaw(studentB)) {
-            System.out.println(studentA + " лучший Гриффиндорец, чем " + studentB);
-        } else {
-            System.out.println(studentB + " лучший Гриффиндорец, чем " + studentA);
-        }
-    }
-    public static void comparisonOfSlytherin(Slytherin studentA, Slytherin studentB) {
-        if (sumOfPointsSlytherin(studentA) > sumOfPointsSlytherin(studentB)) {
-            System.out.println(studentA + " лучший Гриффиндорец, чем " + studentB);
-        } else {
-            System.out.println(studentB + " лучший Гриффиндорец, чем " + studentA);
-        }
-    }
     public static void studentOfGryffindor () {
         for (Gryffindor gryffindor: gryffindors) {
                 System.out.println("У " + gryffindor.getStudent() + " благородство = "
@@ -104,7 +59,6 @@ public class Main {
         }
     }
     public static void studentOfHufflepuff () {
-        Hogwarts max = hufflepuffs[0];
         for (Hufflepuff hufflepuff : hufflepuffs) {
             System.out.println("У " + hufflepuff.getStudent() + " сила магии = "
                     + hufflepuff.getPowerOfMagic() + ", транcгрессия = "
@@ -117,7 +71,6 @@ public class Main {
         }
     }
     public static void studentOfRavenclaw () {
-        Hogwarts max = ravenclaws[0];
         for (Ravenclaw ravenclaw : ravenclaws) {
             System.out.println("У " + ravenclaw.getStudent() + " сила магии = "
                     + ravenclaw.getPowerOfMagic() + ", транcгрессия = "
@@ -131,7 +84,6 @@ public class Main {
         }
     }
     public static void studentOfSlytherin () {
-        Hogwarts max = slytherins[0];
         for (Slytherin slytherin : slytherins) {
             System.out.println("У " + slytherin.getStudent() + " сила магии = "
                     + slytherin.getPowerOfMagic() + ", транcгрессия = "

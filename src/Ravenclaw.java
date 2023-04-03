@@ -43,4 +43,17 @@ public class Ravenclaw extends Hogwarts{
     public void setFullOfCreativity(int fullOfCreativity) {
         this.fullOfCreativity = fullOfCreativity;
     }
+
+    public static int sumOfPointsRavenclaw (Ravenclaw student) {
+        int sumOfPoints = student.getMind() + student.getWisdom() + student.getWit() + student.getFullOfCreativity();
+        return sumOfPoints;
+    }
+
+    public static void comparisonOfRavenclaw(Ravenclaw studentA, Ravenclaw studentB) {
+        if (Ravenclaw.sumOfPointsRavenclaw(studentA) > Ravenclaw.sumOfPointsRavenclaw(studentB)) {
+            System.out.println(studentA + " лучший Гриффиндорец, чем " + studentB);
+        } else {
+            System.out.println(studentB + " лучший Гриффиндорец, чем " + studentA);
+        }
+    }
 }
