@@ -43,7 +43,7 @@ public class Main {
         Slytherin.comparisonOfSlytherin(slytherins[0], slytherins[1]);
         System.out.println();
 
-        comparisonOfStudents(gryffindors[1], slytherins [1]);
+        Hogwarts.comparisonOfStudents(gryffindors[1], slytherins [1]);
         System.out.println();
 
         }
@@ -98,18 +98,5 @@ public class Main {
         }
     }
 
-    public static void comparisonOfStudents (Hogwarts studentA, Hogwarts studentB) {
-        if (studentA.getPowerOfMagic() > studentB.getPowerOfMagic()) {
-            System.out.println(studentA.getStudent() + " обладает бОльшей мощностью магии, чем " + studentB.getStudent());
-        } else {
-            System.out.println(studentB.getStudent() + " обладает бОльшей мощностью магии, чем " + studentA.getStudent());
-        }
-
-        if (studentA.getTransgression() > studentB.getTransgression()) {
-            System.out.println(studentA.getStudent() + " обладает бОльшим расстоянием трансгрессии, чем " + studentB.getStudent());
-        } else {
-            System.out.println(studentB.getStudent() + " обладает бОльшим расстоянием трансгрессии, чем " + studentA.getStudent());
-        }
-    }
 
 }

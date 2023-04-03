@@ -37,4 +37,18 @@ public class Hogwarts {
     public String toString() {
         return  student;
     }
+
+    public static void comparisonOfStudents (Hogwarts studentA, Hogwarts studentB) {
+        if (studentA.getPowerOfMagic() > studentB.getPowerOfMagic()) {
+            System.out.println(studentA.getStudent() + " обладает бОльшей мощностью магии, чем " + studentB.getStudent());
+        } else {
+            System.out.println(studentB.getStudent() + " обладает бОльшей мощностью магии, чем " + studentA.getStudent());
+        }
+
+        if (studentA.getTransgression() > studentB.getTransgression()) {
+            System.out.println(studentA.getStudent() + " обладает бОльшим расстоянием трансгрессии, чем " + studentB.getStudent());
+        } else {
+            System.out.println(studentB.getStudent() + " обладает бОльшим расстоянием трансгрессии, чем " + studentA.getStudent());
+        }
+    }
 }
